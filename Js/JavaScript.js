@@ -35,7 +35,7 @@ marcas_json.id=1){
         var selec_modelo=document.createElement('select')
         selec_modelo.className="selec_modelo"
 
-        for(var i=0; i<MODELOS_json.modelosFord.length;i++){
+        for(var i=0; i<MODELOS_json.Modelos[0].length;i++){
           var option=document.createElement('option')
           option.value=i
           option.text=MODELOS_json.modelosFord[i].name;
