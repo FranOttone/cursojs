@@ -30,8 +30,7 @@ $(document).ready(function(){
   }).done(function(data){
     MODELOS_json=JSON.parse(data)
   
-    if(
-marcas_json.id=1){
+    if(marcas_json.id==1){
         var selec_modelo=document.createElement('select')
         selec_modelo.className="selec_modelo"
 
