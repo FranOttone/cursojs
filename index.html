@@ -6,7 +6,9 @@
     <title>Document</title>
     <script src="Js/jquery-3.6.0.min.js"></script>
     <script src="Js/JavaScript.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -15,24 +17,43 @@
         </div>
     </header>
 <section>
-    <div class="divFlex cotizador">
+    <div class="container">
         <div class="divTexto">
             <p class="p">Seguros para autos</p>
             <h1 class="h1">Contratá el seguro perfecto para vos</h1>
-                <div>
-                   <select name="marcas" id="marcas" >
-                       <option value="000">Marcas</option>
-                       <option value="1">Audi</option>
-                       <option value="2">BWM</option>
-                       <option value="3">Chevrolet</option>
-                       <option value="4">Citroen</option>
-                       <option value="5">Daihatsu</option>
-                       <option value="6">Dodge</option>
-                       <option value="7">Fiat</option>
-                       <option value="8">Ford</option>
-                   </select>
-                   <select name="modelos" id="modelos">
-                   </select>
+                <div class="row container">
+                    <div class="cotizador">
+                        <select class="form-select col-2" name="marcas" id="marcas" >
+                            <option selected>Marcas</option>
+                            <option value="1">Audi</option>
+                            <option value="2">BWM</option>
+                            <option value="3">Chevrolet</option>
+                            <option value="4">Citroen</option>
+                            <option value="5">Daihatsu</option>
+                            <option value="6">Dodge</option>
+                            <option value="7">Fiat</option>
+                            <option value="8">Ford</option>
+                        </select>
+                   
+                        <select class="form-select col-2"name="Año" id="Año">
+                            <option selected>Año</option>
+                            <option value="0km">0km</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
+                        <select class="form-select col-2"name="modelo" id="modelos">
+
+                        </select>
+                    </div>
                 </div>
         </div>
     </div>
