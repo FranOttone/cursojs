@@ -12,13 +12,12 @@ $(document).ready(function(){
         var años=$('input#CalculadorAños').val();
         console.log(años)
         
-        if($('#selector').val()="1"){
+        
             var resultadoHombre= 66+(13.7*peso ) + (5*altura)-(6.75*años)
-            console.log(resultadoHombre)}
-
-        if($('#selector').val()="2"){
-            var resultadoMujer=655+(9.6*peso)+(1.8*altura)-(4.7*años)
-            console.log(resultadoMujer)
+            console.log(resultadoHombre)
+        
+            $('#grid').append('<div>Tus calorias diarias recomnedadas son</div>'+resultadoHombre);
         }
-        })
-    })
+
+       
+    )})
