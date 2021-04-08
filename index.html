@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="Js/jquery-3.6.0.min.js"></script>
     <script src="Js/JavaScript.js"></script>
+    <script src="Js/bootstrap.min.js"> </script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+
+<body id="bg">
+    <section>
+        <div class="main">
+            <div class="texto">
+                <h1>Calorías Diarias</h1>
+                <p>Para hacer el cálculo necesitamos información sobre tí</p>
+            </div>
+        </div>
+        <div id="grid">
+            <div class="divGrid" >
+                <h2 class="textoGrid">¿Cuál es tu género?</h2>
+                <div id="PasoUno"> 
+                    <select name="selector" id="selector" >
+                        <option value="000">Género</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                </div>
+            </div>
+            <div class="divGrid" id="PasoDos">
+                <h2 class="textoGrid">¿Cuánto mides?</h2>
+                <input name="CalculadorMedida" type="tel" id="CalculadorMedida" class="Input" maxlength="3">
+                <label for="CalculadorMedida">cm</label>
+            </div>
+            <div class="divGrid" id="PasoTres">
+                <h2 class="textoGrid">¿Cuánto pesas?</h2>
+                <input name="CalculadorPeso" type="tel" id="CalculadorPeso" class="Input" maxlength="3">
+                <label for="CalculadorPeso">kg</label>
+            </div>
+            <div class="divGrid" id="PasoCuatro">
+                <h2 class="textoGrid">¿Cuántos años tienes?</h2>
+                <input name="CalculadorAños" type="tel" id="CalculadorAños" class="Input" maxlength="3">
+                <label for="CalculadorAños">años</label>
+            </div>
+        </div>
+        <div>
+            <button id="Confirmar">Calculá tus calorías diarias recomendadas</button>
+        </div>
+        
+    </section>
 </body>
+
 </html>
