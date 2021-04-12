@@ -1,23 +1,21 @@
-$(document).ready(function(){
 
+$(document).ready(function () {
     
-    $('#Confirmar').click(function(){
+    $('input#proteinas').change(function()
+    {
+    const peso= $('input#proteinas').val();
+            console.log(peso) 
+            $('#calcular').click(() =>{
+                $.post("https://jsonplaceholder.typicode.com/posts", peso, function(data, estado) {
+                    var proteinas= parseInt(peso*1.7)
+                    if(estado ==="success")
+                      {
+                        $('#contenedor').append(`<div>Cantudad de proteínas:${proteinas}gr</div>`)
+                
+                      }  
+                    });
+                });
+                });
     
-        var altura=$('input#CalculadorMedida').val();
-        console.log(altura)
-        
-        var peso=$('input#CalculadorPeso').val();
-        console.log(peso)
-        
-        var años=$('input#CalculadorAños').val();
-        console.log(años)
-        
-        
-            var resultadoHombre= 66+(13.7*peso ) + (5*altura)-(6.75*años)
-            console.log(resultadoHombre)
-        
-            $('#grid').append('<div>Tus calorias diarias recomnedadas son</div>'+resultadoHombre);
-        }
-
-       
-    )})
+    
+    });

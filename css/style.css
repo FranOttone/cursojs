@@ -1,54 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: cornflowerblue;
-}
-
-.main{
-    width: 100%;
-    height: 100%;
-    margin-top: 10rem;
-}
-.texto{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: 'Cabin', sans-serif;
-    font-weight: 700;
-}
-#grid{
-    display: grid;
-    grid-template-rows: 300px 300px;
-    grid-template-columns: 500px 500px ;
-    justify-content: center;
-    margin: 50px;
-
-}
-.divGrid{
+    background:#ebf5fc( 159, 227, 217);
     display: flex;
-    height:15.625rem ;
-    width: 100%;
-    border: 0.5px grey solid;
-    background-color: white;
-    display: block;
-    margin: auto;
-
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ 
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0 ;
 
 }
 
-.Input{
-    height: 30px;
-    margin-top: 75px;
-    margin-left: 150px;
-    border-style: none;
-    border-bottom: 3px black solid;
-    width: 45px;
-    font-size: 30px;
-    font-family: 'Cabin', sans-serif; ;
+.calculadora{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255, 0.5),
+                    5px 5px 5px rgba(0,0,0,0.05),
+                    -5px -5px 5px rgba(255,255,255,0.5);
+    margin: 30px;
+    border-radius: 20px;
+}
+.calculadora .carta{
+    position: absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    background:#ebf5fc(241, 223, 223);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.calculadora .carta .caja{
+    padding: 20px;
+    text-align: center;
+}
+.calculadora .carta .caja h3{
+    font-size: 1.5rem;
+    color: #777;
+    z-index: 1;
+    transition: 0.5;
+}
+.calculadora .carta .caja p{
+    font-size: 1rem;
     font-weight: 400;
+    color: #777;
+    z-index: 1;
+    transition: 0.5;
+
 }
-.Input:focus{
-   outline: none;
-   
+.calculadora .carta .caja a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background:#03a9f4 ;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: #fff;
+    text-decoration: none;
+    margin-top: 15px;
 }
-.textoGrid{font-family: 'Cabin', sans-serif; ;
-    font-weight: 700;
+.calculadora:hover .carta .caja a{
+    background: #ff568f;
+    color: #fff;
+}
+.calculadora:hover .carta{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg,#b95ce4,#4f29cd);
+}
+.calculadora:hover .carta .caja h3,
+.calculadora:hover .carta .caja p{
+    color: #fff;
 }
