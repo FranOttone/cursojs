@@ -7,14 +7,40 @@
     <title>Document</title>
     <script src="../Js/jquery-3.6.0.min.js"></script>
     <script src="../Js/JavaScript.js"></script>
+    <link rel="stylesheet" href="../css/proteinas-style.css">
 </head>
 <body>
-    <div class="main">
-        <div id="contenedor">
-            <h2>Cantidad de Proteínas</h2>
-            <input placeholder="Tu peso" maxlength="3" type="text" id="proteinas">
-            <button id="calcular">Calcular Proteínas</button>
+    <h1>Calcula tus proteinas diarias</h1>
+
+    
+    <div class="contenedor">
+        <div class="grid">
+            <h3>¿Cuánto pesas?</h3>
+            <div class="contenedor-peso">
+                <input  id="kg" name="peso"  type="text" required maxlength="3"/>
+                <label for="peso" class="label-peso">
+                    <span class="span-peso">Peso</span>
+                    <span class="span-kg">Kg</span>
+                </label>
+            </div> 
+        </div>
+        <div class="grid1">
+            <h3>¿Cuál es tu género?</h3>
+            
+               <button id="btnHombre" class="opcion" value="hombre">Hombre</button> 
+                <button id="btnMujer" class="opcion" value="mujer">Mujer</button>
+            
+        </div>
+        <div class="grid">
+            <h3>¿Cuánta actividad física haces?</h3>
+            <button id="sedentario" class="opcion" value="sedentario">Sedentario</button> 
+            <button id="vec" class="opcion" value="vec">De vez en cuando</button>
+            <button id="diario" class="opcion" value="diario">A diario</button> 
         </div>
     </div>
+    <div class="btn">
+        <button id="calcular">Calcular Proteínas</button>
+    </div>
+
 </body>
 </html>
