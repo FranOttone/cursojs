@@ -14,32 +14,51 @@
 
     
     <div class="contenedor">
-        <div class="grid">
+        <div class="grid" id="GRID">
             <h3>¿Cuánto pesas?</h3>
             <div class="contenedor-peso">
-                <input  id="kg" name="peso"  type="text" required maxlength="3"/>
+                <input  id="kg" name="peso"  type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+                maxlength="3"/>
                 <label for="peso" class="label-peso">
                     <span class="span-peso">Peso</span>
                     <span class="span-kg">Kg</span>
                 </label>
             </div> 
         </div>
-        <div class="grid1">
+        <div class="grid1" id="GRID">
             <h3>¿Cuál es tu género?</h3>
-            
-               <button id="btnHombre" class="opcion" value="hombre">Hombre</button> 
-                <button id="btnMujer" class="opcion" value="mujer">Mujer</button>
-            
+            <div class="radioDiv">
+                <input name="genero" id="hombre" type="radio" value="hombre" >
+                <label class="radio-label" for="hombre">Hombre</label>
+            </div>
+            <div class="radioDiv">
+                <input  name="genero"  id="mujer" type="radio" value="mujer">
+                <label class="radio-label" for="mujer">Mujer</label>
+            </div>
         </div>
-        <div class="grid">
-            <h3>¿Cuánta actividad física haces?</h3>
-            <button id="sedentario" class="opcion" value="sedentario">Sedentario</button> 
-            <button id="vec" class="opcion" value="vec">De vez en cuando</button>
-            <button id="diario" class="opcion" value="diario">A diario</button> 
+        <div class="grid2" id="GRID">
+            <h3>¿Actividad física?</h3>
+            <div class="radioDiv">
+                <input type="radio" name="actividad" id="sedentario">
+                <label class="radio-label" for="sedentario">Sedentario </label>
+            </div>
+
+            <div class="radioDiv">
+                <input type="radio"name="actividad" id="medianamente">
+                <label class="radio-label" for="medianamente">De vez en cuando</label>
+            </div>
+
+            <div class="radioDiv">
+                <input type="radio"name="actividad"id="activo">
+                <label class="radio-label" for="activo">Siempre</label>
+            </div>
+
+            
         </div>
     </div>
     <div class="btn">
-        <button id="calcular">Calcular Proteínas</button>
+        <button id="calcular" onclick="calPro()">Calcular Proteínas</button>
     </div>
 
 </body>
