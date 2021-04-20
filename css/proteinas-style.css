@@ -1,16 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:  'Poppins', sans-serif;
-}
-body{
-    display: block; 
-    height: 60vh;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
+
 h1{
     text-align: center;
     margin: 50px;
@@ -47,7 +36,7 @@ h3{
     width: 50%;
     position: relative;
     overflow: hidden;
-    text-align: center;
+    
 
 }
 input::-webkit-outer-spin-button,
@@ -63,12 +52,10 @@ input::-webkit-inner-spin-button {
     outline: none;
     font-size: 18px;
     text-align: center;
-    cursor:text;
-    
     
 }
 
-.contenedor-peso label{
+.contenedor-peso .label-peso{
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -77,16 +64,16 @@ input::-webkit-inner-spin-button {
     pointer-events: none;
     border-bottom: 1px solid black;
 }
-.contenedor-peso label::after{
+.contenedor-peso .label-peso::after{
     content: "";
-    border-bottom: 3px solid rgb(117, 166, 246);
+    border-bottom: 3px solid #65ca85;
     position:absolute;
     width: 100%;
     height: 100%;
     left: 0px;
     bottom: -1px;
     transform: translateX(-100%);
-    transition: transform all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .span-peso{
     position: absolute;
@@ -103,7 +90,7 @@ input::-webkit-inner-spin-button {
 .contenedor-peso input:valid + .label-peso .span-peso{
     transform: translateY(-150%);
     font-size: 14px;
-    color:rgb(117, 166, 246);
+    color:#65ca85
 }
 .contenedor-peso input:focus + .label-peso::after,
 .contenedor-peso input:valid + .label-peso::after{
@@ -131,7 +118,7 @@ input::-webkit-inner-spin-button {
     font-size: 20px;
 }
 #calcular:hover{
-    background:  #ff7675;
+    background:  #65ca85;
 }
 .grid1{
     flex: 1 1 40% ;
@@ -168,7 +155,7 @@ input::-webkit-inner-spin-button {
 }
 
 .append{
-    background:#7bed9f;
+    background:#65ca85;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -196,8 +183,8 @@ input[type="radio"]{
 .radio-label{
     position: relative;
     font-size: 20px;
-    color: #74b9ff;
-    border: 2px solid #74b9ff;
+    color: #65ca85;
+    border: 2px solid #65ca85;
     border-radius: 5px;
     padding: 10px 50px;
     display: flex;
@@ -209,19 +196,19 @@ input[type="radio"]{
     content: "";
     height: 25px;
     width: 25px;
-    border: 3px solid #74b9ff;
+    border: 3px solid #65ca85;
     border-radius: 50%;
     margin-right: 20px;
 }
 input[type="radio"]:checked +.radio-label{
-    background-color: #74b9ff;
+    background-color: #65ca85;
     color: white;
 }
 input[type="radio"]:checked +.radio-label:before{
     height: 16px;
     width: 16px;
     border:  8px solid white;
-    background-color: #74b9ff;
+    background-color: #65ca85;
 }
 .requerido{
     border-color: #ff7675;

@@ -6,12 +6,19 @@
     font-family:  'Poppins', sans-serif;
 }
 body{
-    background:#ebf5fc( 159, 227, 217);
+    background:whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
  
+}
+h1{
+    font-size: 80px;
+    color: #65ca85;
+    font-weight: 700;
+    position: absolute;
+    top: 10%;
 }
 .contenedor{
     display: flex;
@@ -39,7 +46,7 @@ body{
     left:20px;
     right:20px;
     bottom:20px;
-    background:#ebf5fc(241, 223, 223);
+    background:whitesmoke;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
@@ -52,13 +59,13 @@ body{
     text-align: center;
 }
 .calculadora .carta .caja h3{
-    font-size: 1.5rem;
+    font-size: 25px;
     color: #777;
     z-index: 1;
     transition: 0.5;
 }
 .calculadora .carta .caja p{
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
     color: #777;
     z-index: 1;
@@ -70,20 +77,20 @@ body{
     display: inline-block;
     padding: 8px 20px;
     border-radius: 20px;
-    background:#03a9f4 ;
+    background:#65ca85 ;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     color: #fff;
     text-decoration: none;
     margin-top: 15px;
 }
 .calculadora:hover .carta .caja a{
-    background: #ff568f;
-    color: #fff;
+    background: #e0d8b0;
+    color: #777;
 }
 .calculadora:hover .carta{
     transform: translateY(-50px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.35);
-    background: linear-gradient(45deg,#b95ce4,#4f29cd);
+    background: #65ca85;
 }
 .calculadora:hover .carta .caja h3,
 .calculadora:hover .carta .caja p{

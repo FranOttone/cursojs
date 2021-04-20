@@ -8,9 +8,20 @@
     <script src="../Js/jquery-3.6.0.min.js"></script>
     <script src="../Js/JavaScript.js"></script>
     <link rel="stylesheet" href="../css/proteinas-style.css">
+    <link rel="stylesheet" href="../css/general.css">
 </head>
 <body>
-    <h1>Calcula tus proteinas diarias</h1>
+    <header>
+        <div class="header">
+            <div class="divMarca"><a href="../index.html">FitCalc</a></div>
+                <div class="Menu-main">
+                    <div class="divMenu"><a href="Imc.html">IMC</a></div>
+                    <div class="divMenu"><a href="">Proteínas</a></div>
+                    <div class="divMenu"><a href="Calorías.html">Calorías</a></div>
+                </div>
+        </div>
+    </header>
+    <h1>Calcula tus proteínas diarias</h1>
 
     
     <div class="contenedor">
@@ -19,7 +30,7 @@
             <div class="contenedor-peso">
                 <input  id="kg" name="peso"  type="number"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
-                maxlength="3"/>
+                maxlength="3" required/>
                 <label for="peso" class="label-peso">
                     <span class="span-peso">Peso</span>
                     <span class="span-kg">Kg</span>

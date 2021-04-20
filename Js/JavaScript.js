@@ -33,12 +33,11 @@ function calPro(){
         }
     
     else{
+        $('.append2').remove()
         $('.grid').addClass("requerido");
         $('.grid1').addClass("requerido");
         $('.grid2').addClass("requerido");
         $('.contenedor').append('<div class="append2">*Completa todos los campos*</div>')
-            
-       
     }
 }
 calPro()

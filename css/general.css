@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+}
+body{
+    display: block; 
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header{
+    display: flex;
+    border-bottom:0.6px solid gray;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 80px;
+    align-items: center;
+}
+.divMarca{
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: center;
+
+}
+.divMarca a{
+    font-size: 40px;
+    font-weight: 700;
+    color: #65ca85;
+}
+.Menu-main{
+display: flex;
+position:absolute;
+right: 20px;
+}
+
+a{
+ text-decoration: none;
+ color: inherit;
+}
+.divMenu{
+    width: auto;
+    margin:20px;
+}
+
+.divMenu a{
+    font-size: 20px;
+    font-weight: 50px;
+}
