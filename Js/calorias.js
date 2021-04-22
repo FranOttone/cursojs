@@ -1,4 +1,18 @@
 $(function(){
+    $('input#kg').change(function() { 
+        
+        const peso=$('input#kg').val()
+        $.post("https://jsonplaceholder.typicode.com/posts", peso,
+            function (respuesta, estado) {
+                if(estado="succsess"){
+                  return  console.log(respuesta.peso)
+                   
+                }    
+            },
+            
+        );
+        
+    });
     $('button#calcular').click(function (e) { 
         e.preventDefault();
         var años=Id('años').value;
@@ -6,16 +20,8 @@ $(function(){
     var altura=Id('altura').value;
     var caracteristicas=(años,peso,altura)
     var caloriasDiarias;
-    var data=parseInt(peso,altura,años)
     
     function Id(id){return document.getElementById(id)}
-$.post("https://jsonplaceholder.typicode.com/posts", data,function(respuesta,estado){
-    if(estado==="success"){
-        console.log(data)
-    }
-})
-    
-        
     
         
     
@@ -29,6 +35,7 @@ $.post("https://jsonplaceholder.typicode.com/posts", data,function(respuesta,est
     var mujerSedentario=(Id('mujer').checked&& Id('sedentario').checked);
     var mujerMedio=(Id('mujer').checked&& Id('medianamente').checked);
     var mujerActivo=(Id('mujer').checked&& Id('activo').checked);
+    
     
     function generarDiv(){
         $('.grid').removeClass("requerido");
