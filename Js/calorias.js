@@ -1,15 +1,27 @@
-window.onload=calorias();
-
-function calorias(){
-    
-    function Id(id){return document.getElementById(id)}
-    var años=Id('años').value;
+$(function(){
+    $('button#calcular').click(function (e) { 
+        e.preventDefault();
+        var años=Id('años').value;
     var peso=Id('kg').value;
     var altura=Id('altura').value;
+    var caracteristicas=(años,peso,altura)
+    var caloriasDiarias;
+    var data=parseInt(peso,altura,años)
+    
+    function Id(id){return document.getElementById(id)}
+$.post("https://jsonplaceholder.typicode.com/posts", data,function(respuesta,estado){
+    if(estado==="success"){
+        console.log(data)
+    }
+})
+    
+        
+    
+        
+    
     var tmbMujer=665+(9.6*peso)+(1.8*altura)-(4.7*años);
     var tmbHombre=66+(13.7*peso)+(5*altura)-(6.8*años);
-    var caracteristicas=[años,peso,altura]
-    var caloriasDiarias;
+    
     
     var hombreSedentario=(Id('hombre').checked&&Id('sedentario').checked);
     var hombreMedio=(Id('hombre').checked&& Id('medianamente').checked);
@@ -89,4 +101,5 @@ function calorias(){
             $('.grid2').addClass("requerido");
             $('.contenedor').append('<div class="append2">*Completa todos los campos*</div>')
         }
-}
+    })
+});
