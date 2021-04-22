@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../Js/jquery-3.6.0.min.js"></script>
+    <script src="../Js/imc.js"></script>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/imc-sytle.css">
 </head>
 <body>
     <header>
@@ -18,5 +21,41 @@
                 </div>
         </div>
     </header>
+
+    <h1>Calculá tu IMC</h1>
+    
+    <div class="contenedor">
+        <div class="grid">
+            <h3>¿Cuánto pesas?</h3>
+            <div class="contenedor-peso">
+                <input  id="kg" name="peso"  type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+                maxlength="3" required/>
+                <label for="peso" class="label-peso">
+                    <span class="span-peso">Peso</span>
+                    <span class="span-kg">Kg</span>
+                </label>
+            </div> 
+        </div>
+        <div class="grid1">
+            <h3>¿Cuánto mides?</h3>
+            <div class="contenedor-peso">
+                <input  id="altura" name="altura"  type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+                maxlength="3" required/>
+                <label for="altura" class="label-peso">
+                    <span class="span-peso">Altura</span>
+                    <span class="span-kg">Cm</span>
+                </label>
+            </div> 
+        </div>
+        <div class="grid2 grid-display"></div>
+        <div class="grid3 grid-display">
+            <img class="img" src="../img/tabla.png" alt="">
+        </div>
+    </div>
+    <div class="btn">
+            <button id="calcular" onclick="calImc()">Calcular IMC</button>
+        </div>
 </body>
 </html>

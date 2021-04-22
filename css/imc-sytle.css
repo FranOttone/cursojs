@@ -10,15 +10,6 @@ h3{
    transform: translateY(-60px);
    text-align: center;
 }
-.contenedor{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    gap: 2em;
-    margin: auto;
-    justify-content: center;
-    
-}
 .grid{
     flex: 1 1 40% ;
     height: 230px;
@@ -29,9 +20,54 @@ h3{
     align-items: center;
 
 }
+.grid1{
+    flex: 1 1 40% ;
+    height: 230px;
+    border-radius: 20px;
+    border: 0.5px solid #dfe6e9 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid2{
+    flex: 1 1 40% ;
+    height: 250px;
+    border-radius: 20px;
+    border: 0.5px solid #dfe6e9 ;
+    display:flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+.grid3{
+    flex: 1 1 40% ;
+    height: 250px;
+    border-radius: 20px;
+    border: 0.5px solid #dfe6e9 ;
+    display:flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+.grid-display{
+    display: none;
+}
+.requerido{
+    border-color: #ff7675;
+}
+.prepend{
+    color: #ff7675;
+    font-size: 20px;
+    margin:20px;
+}
 
 
-
+.contenedor{
+    display: flex;
+    flex-wrap:wrap;
+    width: 50%;
+    gap: 2em;
+    margin: auto;
+    
+}
 .contenedor-peso{
     height: 50px;
     width: 50%;
@@ -97,13 +133,13 @@ input::-webkit-inner-spin-button {
 .contenedor-peso input:valid + .label-peso::after{
     transform: translateX(0%);
 }
-
 .btn{
     margin: auto;
     margin-top: 20px;
     width: 500px;
-    height: 60px;
+    height: auto;
     text-align: center;
+
     
 }
 #calcular{
@@ -117,90 +153,28 @@ input::-webkit-inner-spin-button {
     color: white;
     font-weight: bold;
     font-size: 20px;
+    height: 60px;
     cursor: pointer;
 }
 #calcular:hover{
     background:  #65ca85;
 }
-.grid1{
-    flex: 1 1 40% ;
-    height: 230px;
-    border-radius: 20px;
-    border: 0.5px solid #dfe6e9 ;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.txt{
+    display: block;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding: 20px;
+   
 }
-.grid2{
-    flex: 1 1 40% ;
-    height: 250px;
-    border-radius: 20px;
-    border: 0.5px solid #dfe6e9 ;
-    display:flex;
-    align-items:center;
-    justify-content: center;
+.txt2{
+    font-size: 24px;
+    font-weight: 500;
 }
-
-
-.append{
-    background:#65ca85;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 20px;
-    width: 50%;
-    height: 200px;
-    margin-bottom: 40px;
-}
-.append2{
-    font-size: 20px;
-    color: #ff7675;
-    
-}
-.radioDiv{
-    display: flex;
-    margin: 10px;
-    height: 100px;
-    width: 210px;
-    
-}
-input[type="radio"]{
-    display: none;
-}
-.radio-label{
-    position: relative;
-    font-size: 20px;
-    color: #65ca85;
-    border: 2px solid #65ca85;
-    border-radius: 5px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-top: 35px;
+.img{
     width: 100%;
-}
-.radio-label:before{
-    content: "";
-    height: 25px;
-    width: 25px;
-    border: 3px solid #65ca85;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-input[type="radio"]:checked +.radio-label{
-    background-color: #65ca85;
-    color: white;
-}
-input[type="radio"]:checked +.radio-label:before{
-    height: 16px;
-    width: 16px;
-    border:  8px solid white;
-    background-color: #65ca85;
-}
-.requerido{
-    border-color: #ff7675;
+    height: 100%;
+    border-radius: 20px;
+    
 }

@@ -1,4 +1,3 @@
-
 h1{
     text-align: center;
     margin: 50px;
@@ -23,11 +22,30 @@ h3{
     flex: 1 1 40% ;
     height: 230px;
     border-radius: 20px;
-    border: 0.5px solid #dfe6e9 ;
+    border: 0.5px solid #dbdbdb ;
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+.grid1{
+    flex: 1 1 40% ;
+    height: 230px;
+    border-radius: 20px;
+    border: 0.5px solid #dbdbdb ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grid2{
+    flex: 1 1 40% ;
+    height: 250px;
+    border-radius: 20px;
+    border: 0.5px solid #dbdbdb ;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 
 
@@ -122,38 +140,49 @@ input::-webkit-inner-spin-button {
 #calcular:hover{
     background:  #65ca85;
 }
-.grid1{
-    flex: 1 1 40% ;
-    height: 230px;
-    border-radius: 20px;
-    border: 0.5px solid #dfe6e9 ;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.grid2{
-    flex: 1 1 40% ;
-    height: 250px;
-    border-radius: 20px;
-    border: 0.5px solid #dfe6e9 ;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
+
 
 
 .append{
-    background:#65ca85;
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 20px;
-    width: 50%;
-    height: 200px;
-    margin-bottom: 40px;
+    margin-top: 3rem;
+    width: auto;
+    height: 300px;
+    
+}
+
+.calorias{
+    border:1px solid #65ca85  ;
+    width: 350px;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+.calorias .kcal{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.calorias h2{
+    font-size: 22px;
+    text-align: center;
+}
+.calorias p{
+    font-size: 18px;
+    text-align: center;
+    margin: 15px;
+}
+
+.resultado{
+    
+    font-size: 25px;
+    font-weight: 500;
 }
 .append2{
     font-size: 20px;
