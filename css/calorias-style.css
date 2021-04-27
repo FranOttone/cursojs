@@ -22,7 +22,7 @@ h3{
     flex: 1 1 40% ;
     height: 230px;
     border-radius: 20px;
-    border: 0.5px solid #dbdbdb ;
+    border: 0.5px solid #c2bdbd ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ h3{
     flex: 1 1 40% ;
     height: 230px;
     border-radius: 20px;
-    border: 0.5px solid #dbdbdb ;
+    border: 0.5px solid #c2bdbd ;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,7 +42,7 @@ h3{
     flex: 1 1 40% ;
     height: 250px;
     border-radius: 20px;
-    border: 0.5px solid #dbdbdb ;
+    border: 0.5px solid #c2bdbd ;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -71,6 +71,7 @@ input::-webkit-inner-spin-button {
     outline: none;
     font-size: 18px;
     text-align: center;
+    background: inherit;
     
 }
 

@@ -1,25 +1,32 @@
 $(function(){
-    $('input#kg').change(function() { 
-        
-        const peso=$('input#kg').val()
-        $.post("https://jsonplaceholder.typicode.com/posts", peso,
-            function (respuesta, estado) {
-                if(estado="succsess"){
-                  return  console.log(respuesta.peso)
-                   
-                }    
-            },
-            
-        );
-        
-    });
-    $('button#calcular').click(function (e) { 
+    
+
+$('button#calcular').click(function (e) { 
         e.preventDefault();
         var años=Id('años').value;
     var peso=Id('kg').value;
     var altura=Id('altura').value;
     var caracteristicas=(años,peso,altura)
     var caloriasDiarias;
+    var sexo=[]
+    if($('#hombre:checked').val()){
+        sexo="Hombre"
+
+    }
+    else{
+        sexo="Mujer"
+    }
+    var CARACTERISTICAS=[sexo,"Peso: "+peso+" Kg","Altura: "+altura+" Cm","Edad: "+años]
+    CARACTERISTICAS=JSON.stringify(CARACTERISTICAS)
+const url="https://jsonplaceholder.typicode.com/posts"
+$.post(url, CARACTERISTICAS,
+    function (respuesta, estado) {
+        if(estado=="success"){
+            console.log(peso)
+        }
+    },
+    
+);
     
     function Id(id){return document.getElementById(id)}
     

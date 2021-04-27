@@ -1,14 +1,34 @@
-window.onload=calPro();
+$(function(){
+    
 
-function calPro(){
+$('#calcular').click(function(e){
+    e.preventDefault()
     function Id(id){return document.getElementById(id)}
     var peso=Id('kg').value
     var resultado=0
+    var sexo=[]
+        if($('#hombre:checked').val()){
+            sexo="Hombre"
+    
+        }
+        else{
+            sexo="Mujer"
+        }
+        var caracteristicas=[sexo,"Peso: "+peso+" Kg"]
+        caracteristicas=JSON.stringify(caracteristicas)
+    const url="https://jsonplaceholder.typicode.com/posts"
+    $.post(url, caracteristicas,
+        function (respuesta, estado) {
+            if(estado=="success"){
+                console.log(peso)
+            }
+        },
+    );
     
     function generarDiv(){
 
     $('#creado').remove()
-    $('body').append('<div id="creado" class="append">Proteínas diarias:'+' '+Math.round(resultado)+'</div>')
+    $('body').append(`<div id="creado" class="append"><p class="txt">Proteínas diarias:</p><p class="resultado"> ${Math.round(resultado)} gr</p></div>`)
     $('.append2').remove()
     $('.requerido').removeClass('requerido');
     }
@@ -34,5 +54,6 @@ function calPro(){
         $('.grid2').addClass("requerido");
         $('.contenedor').append('<div class="append2">*Completa todos los campos*</div>')
     }
-}
-calPro()
+});
+
+});
