@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family:  'Poppins', sans-serif;
 }
+::selection{
+    background: #65ca85;
+}
+
 body{
     display: block; 
     height: auto;
@@ -14,12 +18,17 @@ body{
     
 }
 .header{
+    z-index: 4;
+    position: fixed;
+    top: 0;
     display: flex;
     border-bottom:0.6px solid gray;
     margin-left: 20px;
     margin-right: 20px;
     height: 80px;
+    width: 100%;
     align-items: center;
+    background-color: whitesmoke;
 }
 .divMarca{
     display: flex;
@@ -56,4 +65,19 @@ a{
 }
 .divMenu a:hover{
     color: #65ca85;
+}
+.bottom{
+position: fixed;
+bottom: 0;
+display: flex;
+justify-content: center;
+margin-top: 30px;
+width: 100%;
+background-color: rgb(233, 233, 233);
+}
+.creditos{
+    font-weight: 600;
+}
+.creditos a:hover{
+color: #45aa65;
 }

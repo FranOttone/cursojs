@@ -1,5 +1,13 @@
+
 $(function(){
+    $('.grid2 input').change(function (e) { 
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop:$('.btn').offset().top
+        },800);
+    });
     
+   
 
 $('button#calcular').click(function (e) { 
         e.preventDefault();
@@ -50,7 +58,7 @@ $.post(url, CARACTERISTICAS,
         $('.grid2').removeClass("requerido");
         $('.append2').remove()
         $('.append').remove()
-        $('body').append(`<div class="append">
+        $('body').append(`<div class="append" id="scroll">
             <div class="calorias">
             <h2>Perder peso</h2>
                 <div>
@@ -115,5 +123,9 @@ $.post(url, CARACTERISTICAS,
             $('.grid2').addClass("requerido");
             $('.contenedor').append('<div class="append2">*Completa todos los campos*</div>')
         }
+       
+        $('html, body').animate({
+            scrollTop:$('#scroll').offset().top
+        },800);
     })
 });

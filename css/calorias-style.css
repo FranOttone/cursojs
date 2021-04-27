@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    margin: 50px;
+    margin: 100px 50px 50px 50px;
     font-size: 42px;
 }
 h3{
@@ -120,6 +120,7 @@ input::-webkit-inner-spin-button {
 .btn{
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 40px;
     width: 500px;
     height: 60px;
     text-align: center;
@@ -137,12 +138,11 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    
 }
 #calcular:hover{
     background:  #65ca85;
 }
-
-
 
 .append{
     display:flex;
@@ -151,6 +151,7 @@ input::-webkit-inner-spin-button {
     margin-top: 3rem;
     width: auto;
     height: 300px;
+    margin-bottom: 40px;
     
 }
 

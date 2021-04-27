@@ -54,6 +54,9 @@ $('#calcular').click(function(e){
         $('.grid2').addClass("requerido");
         $('.contenedor').append('<div class="append2">*Completa todos los campos*</div>')
     }
+    $('html, body').animate({
+        scrollTop:$('#creado').offset().top
+    },800);
 });
 
 });
